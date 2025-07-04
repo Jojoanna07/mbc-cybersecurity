@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MBC Lab - Developer</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="preload" href="/thanks.html" as="document">
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+  <!-- NAVBAR -->
+  <nav id="navbar" class="bg-blue-800 text-white p-4 flex items-center justify-between flex-wrap transition duration-300 sticky top-0 z-50 shadow-md w-full">
+  <div class="flex items-center space-x-3">
+    <img src="upscalemedia-transformed.png" alt="Logo MBC" class="h-10 md:h-12 w-auto object-contain" />
+    <span class="text-white font-bold text-lg md:text-xl">MBC Laboratory</span>
+  </div>
+
+  <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+      <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+
+    <div id="menu" class="hidden md:flex md:items-center md:space-x-4">
+      <a href="index.html" class="text-white hover:underline">Home</a>
+      <a href="layanan.html" class="text-white hover:underline">Layanan</a>
+      <a href="kontak.html" class="text-white hover:underline">Kontak</a>
+      <a href="developer.html" class="text-white hover:underline">Developer</a>
+    </div>
+</nav>
+
+  <!-- Menu mobile -->
+  <div id="mobile-menu" class="hidden flex-col bg-blue-400 px-4 py-2 md:hidden">
+    <a href="index.html" class="block mt-4 text-white hover:underline">Home</a>
+    <a href="layanan.html" class="block mt-4 text-white hover:underline">Layanan</a>
+    <a href="kontak.html" class="block mt-4 text-white hover:underline">Kontak</a>
+    <a href="developer.html" class="block mt-4 text-white hover:underline">Developer</a>
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const hamburgerIcon = document.getElementById("hamburger-icon");
+    const closeIcon = document.getElementById("close-icon");
+
+    toggleBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+      hamburgerIcon.classList.toggle("hidden");
+      closeIcon.classList.toggle("hidden");
+    });
+  </script>
+
+  <!-- ISI HALAMAN -->
+  <main class="p-6">
+    <h1 class="text-2xl font-semibold mb-4">Tentang Developer</h1>
+    <p class="mb-6">Halaman ini berisi informasi developer dari landing page ini.</p>
+  
+    <div class="bg-white p-6 rounded shadow-md max-w-md">
+      <h2 class="text-xl font-bold mb-2">Joanna Regina Caeli Sinaga</h2>
+      <p><strong>Asal:</strong> Tangerang</p>
+      <p><strong>Mahasiswa:</strong> S1 Teknologi Informasi, Telkom University</p>
+      <p><strong>Keahlian:</strong> Dasar HTML & CSS, Desain, Dokumentasi</p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/joanna-regina-caeli-sinaga/" class="text-blue-600 underline" target="_blank">Lihat Profil</a></p>
+    </div>
+  </main>
+
+  <footer class="bg-gray-200 text-center p-4 mt-10">
+    &copy; 2025 MBC Laboratory
+  </footer>
+</body>
+</html>

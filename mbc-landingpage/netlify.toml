@@ -1,0 +1,28 @@
+[build]
+  publish = "./"
+  command = ""
+
+[[redirects]]
+  from = "/"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/kontak"
+  to = "/kontak.html"
+  status = 200
+
+[[redirects]]
+  from = "/layanan"
+  to = "/layanan.html"
+  status = 200
+
+[[redirects]]
+  from = "/developer"
+  to = "/developer.html"
+  status = 200
+
+[[redirects]]
+  from = "/thanks"
+  to = "/thanks.html"
+  status = 200

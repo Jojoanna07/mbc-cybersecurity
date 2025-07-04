@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MBC Lab - Kontak</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="preload" href="/thanks.html" as="document">
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+  <!-- NAVBAR -->
+  <nav id="navbar" class="bg-blue-800 text-white p-4 flex items-center justify-between flex-wrap transition duration-300 sticky top-0 z-50 shadow-md w-full">
+  <div class="flex items-center space-x-3">
+    <img src="upscalemedia-transformed.png" alt="Logo MBC" class="h-10 md:h-12 w-auto object-contain" />
+    <span class="text-white font-bold text-lg md:text-xl">MBC Laboratory</span>
+  </div>
+
+  <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+      <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+
+    <div id="menu" class="hidden md:flex md:items-center md:space-x-4">
+      <a href="index.html" class="text-white hover:underline">Home</a>
+      <a href="layanan.html" class="text-white hover:underline">Layanan</a>
+      <a href="kontak.html" class="text-white hover:underline">Kontak</a>
+      <a href="developer.html" class="text-white hover:underline">Developer</a>
+    </div>
+</nav>
+
+  <!-- Menu mobile -->
+  <div id="mobile-menu" class="hidden flex-col bg-blue-400 px-4 py-2 md:hidden">
+    <a href="index.html" class="block mt-4 text-white hover:underline">Home</a>
+    <a href="layanan.html" class="block mt-4 text-white hover:underline">Layanan</a>
+    <a href="kontak.html" class="block mt-4 text-white hover:underline">Kontak</a>
+    <a href="developer.html" class="block mt-4 text-white hover:underline">Developer</a>
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const hamburgerIcon = document.getElementById("hamburger-icon");
+    const closeIcon = document.getElementById("close-icon");
+
+    toggleBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+      hamburgerIcon.classList.toggle("hidden");
+      closeIcon.classList.toggle("hidden");
+    });
+  </script>
+
+  <!-- ISI HALAMAN -->
+  <main class="p-6">
+    <section id="kontak" class="bg-yellow-50 py-12 px-6 md:px-24">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold text-yellow-600 text-center mb-8">Hubungi Kami</h2>
+
+    <!-- Info Kontak -->
+    <div class="grid md:grid-cols-2 gap-8 mb-12">
+      <div>
+        <p class="mb-2"><strong>Email:</strong> <a href="mailto:joananreginacaeli@student.telkomuniversity.ac.id" class="text-blue-600 underline">joananreginacaeli@student.telkomuniversity.ac.id</a></p>
+        <p class="mb-2"><strong>Telepon:</strong> <a href="tel:08176185434" class="text-blue-600 underline">08176185434</a></p>
+        <p class="mb-2"><strong>Alamat:</strong> TULT (Telkom University Landmark Tower), Lantai 13 Ruang 04 dan Lantai 11 Ruang 12, Telkom University, Bandung</p>
+      </div>
+    
+      <!-- FORM KONTAK UNTUK NETLIFY -->
+<form 
+  name="contact" 
+  method="POST" 
+  data-netlify="true" 
+  action="/"
+  onsubmit="openThankYouTab();"
+  class="bg-white shadow-md rounded p-6 space-y-4"
+>
+  <input type="hidden" name="form-name" value="contact" />
+
+  <input type="text" name="user_name" placeholder="Nama Anda" required class="w-full p-2 border border-gray-300 rounded">
+  <input type="email" name="user_email" placeholder="Email Anda" required class="w-full p-2 border border-gray-300 rounded">
+  <textarea name="message" placeholder="Pesan Anda" rows="4" required class="w-full p-2 border border-gray-300 rounded"></textarea>
+  <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded w-full">Kirim Pesan</button>
+</form>
+
+<script>
+  function openThankYouTab() {
+    // Buka tab baru
+    const newTab = window.open("thanks.html", "_blank");
+    // biar Netlify tetap proses form seperti biasa
+    setTimeout(() => {
+      document.forms["contact"].submit();
+    }, 100); 
+  }
+</script>
+
+
+    </div>
+
+    <!-- Google Maps -->
+    <div class="w-full h-64 rounded-lg overflow-hidden">
+      <iframe src="https://maps.google.com/maps?q=TULT%20Telkom%20University&t=&z=17&ie=UTF8&iwloc=&output=embed"
+        width="100%" height="100%" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"
+        class="border border-gray-300">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="bg-gray-200 text-center p-4 mt-10">
+    &copy; 2025 MBC Laboratory
+  </footer>
+</body>
+</html>

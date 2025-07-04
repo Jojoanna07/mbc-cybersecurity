@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MBC Lab - Layanan</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="preload" href="/thanks.html" as="document">
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+  <!-- NAVBAR -->
+  <nav id="navbar" class="bg-blue-800 text-white p-4 flex items-center justify-between flex-wrap transition duration-300 sticky top-0 z-50 shadow-md w-full">
+  <div class="flex items-center space-x-3">
+    <img src="upscalemedia-transformed.png" alt="Logo MBC" class="h-10 md:h-12 w-auto object-contain" />
+    <span class="text-white font-bold text-lg md:text-xl">MBC Laboratory</span>
+  </div>
+
+  <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+      <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+
+    <div id="menu" class="hidden md:flex md:items-center md:space-x-4">
+      <a href="index.html" class="text-white hover:underline">Home</a>
+      <a href="layanan.html" class="text-white hover:underline">Layanan</a>
+      <a href="kontak.html" class="text-white hover:underline">Kontak</a>
+      <a href="developer.html" class="text-white hover:underline">Developer</a>
+    </div>
+</nav>
+
+  <!-- Menu mobile -->
+  <div id="mobile-menu" class="hidden flex-col bg-blue-400 px-4 py-2 md:hidden">
+    <a href="index.html" class="block mt-4 text-white hover:underline">Home</a>
+    <a href="layanan.html" class="block mt-4 text-white hover:underline">Layanan</a>
+    <a href="kontak.html" class="block mt-4 text-white hover:underline">Kontak</a>
+    <a href="developer.html" class="block mt-4 text-white hover:underline">Developer</a>
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById("menu-toggle");
+    const navMenu = document.getElementById("menu");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const hamburgerIcon = document.getElementById("hamburger-icon");
+    const closeIcon = document.getElementById("close-icon");
+
+    toggleBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+      hamburgerIcon.classList.toggle("hidden");
+      closeIcon.classList.toggle("hidden");
+    });
+  </script>
+
+  <!-- ISI HALAMAN -->
+  <main class="p-6">
+    <h1 class="text-2xl font-semibold mb-4">Divisi dan Layanan</h1>
+    <div class="space-y-4">
+      <section class="bg-white py-10 px-6 md:px-20 lg:px-32">
+  <div class="grid md:grid-cols-2 gap-8 items-center">
+    <div class="flex justify-center md:justify-start">
+      <img src="Orang Bertanya.png" alt="Ilustrasi Cybersecurity" class="w-56 h-auto object-contain" />
+    </div>
+
+    <div>
+      <h2 class="text-2xl md:text-3xl font-bold text-blue-800 mb-4">Cybersecurity</h2>
+      <p class="text-gray-800 mb-4">
+        <strong>Cybersecurity</strong> adalah praktik melindungi sistem, jaringan, dan program dari serangan digital. Dalam dunia yang semakin terhubung ini, hampir semua hal yang kita lakukan—belanja online, menyimpan foto, hingga perbankan—melibatkan data digital.
+      </p>
+      <p class="text-gray-800 mb-4">
+        Bayangkan rumahmu punya kunci, jendela terkunci, dan sistem alarm. Nah, cybersecurity adalah semua itu—tapi untuk dunia digitalmu!
+      </p>
+    </div>
+  </div>
+
+  <!-- Bagian Penjelasan Pentingnya Cybersecurity -->
+  <div class="mt-12">
+    <h3 class="text-2xl font-bold text-red-600 mb-2">Mengapa Cybersecurity Penting?</h3>
+    <p class="text-gray-800 mb-4">
+      Tanpa keamanan yang kuat, data kita sangat rentan terhadap ancaman serius: kerugian finansial, reputasi rusak, dan serangan ke infrastruktur negara. Hacker terus mencari cara untuk:
+    </p>
+
+    <ul class="list-disc list-inside space-y-3 text-gray-800">
+      <li><strong>Mencuri data sensitif:</strong> informasi pribadi, data keuangan, rahasia perusahaan.</li>
+      <li><strong>Merusak sistem:</strong> menyebabkan error, menghapus data, kekacauan operasional.</li>
+      <li><strong>Mengganggu layanan:</strong> membuat layanan online tidak bisa diakses.</li>
+      <li><strong>Meminta tebusan:</strong> menyandera data & meminta pembayaran.</li>
+      <li><strong>Memata-matai:</strong> mencuri informasi tanpa sepengetahuan korban.</li>
+    </ul>
+  </div>
+
+  <!-- Bagian Pilar-pilar Cybersecurity -->
+  <div class="mt-10 bg-blue-50 p-6 rounded-lg shadow-md">
+    <h3 class="text-xl font-bold text-blue-700 mb-4">6 Pilar Utama Cybersecurity</h3>
+    <ol class="list-decimal list-inside space-y-2 text-gray-800">
+      <li><strong>Keamanan Jaringan:</strong> Firewall, VPN, dan proteksi jaringan.</li>
+      <li><strong>Keamanan Aplikasi:</strong> Melindungi aplikasi dari eksploitasi.</li>
+      <li><strong>Keamanan Informasi:</strong> Enkripsi dan kontrol akses.</li>
+      <li><strong>Keamanan Operasional:</strong> Izin & prosedur perlindungan data.</li>
+      <li><strong>Pemulihan Bencana:</strong> Rencana menghadapi serangan dan pulih cepat.</li>
+      <li><strong>Edukasi Pengguna:</strong> Menghindari phishing, membuat password kuat, dll.</li>
+    </ol>
+  </div>
+
+  <!-- Bagian Ancaman Umum -->
+  <div class="mt-10">
+    <h3 class="text-xl font-bold text-red-600 mb-2">Ancaman Siber yang Umum</h3>
+    <ul class="list-disc list-inside text-gray-800 space-y-2">
+      <li><strong>Malware:</strong> Virus, ransomware, spyware.</li>
+      <li><strong>Phishing:</strong> Penipuan dengan menyamar sebagai entitas terpercaya.</li>
+      <li><strong>DDoS Attack:</strong> Membanjiri sistem agar tidak bisa diakses.</li>
+      <li><strong>Man-in-the-Middle:</strong> Menyadap komunikasi untuk mencuri data.</li>
+      <li><strong>SQL Injection:</strong> Meretas database dengan perintah palsu.</li>
+    </ul>
+  </div>
+</section>
+<section class="bg-pink-50 p-6 rounded-lg shadow-md my-12">
+  <div class="flex flex-col md:flex-row items-start gap-6">
+    <img src="orang Berlensa.png" alt="Ilustrasi Big Data" class="w-40 mx-auto md:mx-0" />
+    
+    <div class="flex-1">
+      <h2 class="text-2xl font-bold text-pink-700 mb-4">Big Data</h2>
+      <p><strong>Big Data</strong> adalah istilah untuk menggambarkan volume data yang sangat besar dan kompleks yang tidak bisa diproses dengan alat tradisional. Bayangkan kamu punya koleksi buku lebih banyak dari seluruh perpustakaan di dunia—Big Data adalah semua buku itu, dan sistem pencari canggihnya adalah teknologi Big Data!</p>
+      
+      <h3 class="mt-6 text-pink-600 font-semibold">Karakteristik Utama: "3 V’s"</h3>
+      <ul class="list-disc list-inside">
+        <li><strong>Volume:</strong> Data sangat besar dari media sosial, sensor IoT, transaksi, dll.</li>
+        <li><strong>Velocity:</strong> Data datang dan diproses dalam kecepatan tinggi (real-time).</li>
+        <li><strong>Variety:</strong> Format data sangat beragam—terstruktur, semi-terstruktur, tidak terstruktur.</li>
+        <li><strong>Veracity:</strong> Menekankan pada keakuratan dan keandalan data.</li>
+        <li><strong>Value:</strong> Wawasan yang bisa diambil dari data tersebut.</li>
+      </ul>
+
+      <h3 class="mt-6 text-pink-600 font-semibold">Sumber Big Data</h3>
+      <p>Data besar berasal dari berbagai sumber seperti media sosial, sensor IoT, transaksi online, GPS, video, log server, dan lainnya.</p>
+
+      <h3 class="mt-6 text-pink-600 font-semibold">Bagaimana Big Data Bekerja?</h3>
+      <ol class="list-decimal list-inside">
+        <li>Akuisisi data dari berbagai sumber</li>
+        <li>Penyimpanan dalam skala besar (contoh: HDFS)</li>
+        <li>Pemrosesan menggunakan teknologi seperti Apache Spark</li>
+        <li>Analisis dengan teknik ML, statistik, dll.</li>
+        <li>Visualisasi hasil dalam grafik, dashboard, dll.</li>
+      </ol>
+
+      <!-- Box untuk manfaat -->
+      <div class="mt-6 bg-white border-l-4 border-pink-300 p-4 shadow rounded">
+        <h4 class="text-pink-600 font-semibold mb-2">Manfaat Big Data</h4>
+        <ul class="list-disc list-inside">
+          <li>Pengambilan keputusan berbasis data</li>
+          <li>Efisiensi operasional dan optimasi proses</li>
+          <li>Personalisasi layanan dan pengalaman pengguna</li>
+          <li>Inovasi produk dan deteksi penipuan</li>
+          <li>Penelitian ilmiah yang lebih cepat dan akurat</li>
+        </ul>
+      </div>
+
+      <!-- Box untuk tantangan -->
+      <div class="mt-6 bg-white border-l-4 border-pink-300 p-4 shadow rounded">
+        <h4 class="text-pink-600 font-semibold mb-2">Tantangan Big Data</h4>
+        <ul class="list-disc list-inside">
+          <li>Kapasitas penyimpanan dan infrastruktur</li>
+          <li>Kualitas dan kebersihan data</li>
+          <li>Privasi dan keamanan</li>
+          <li>Kebutuhan tenaga ahli data</li>
+          <li>Peraturan dan etika pengolahan data</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Bagian Game Technology -->
+<section class="bg-pink-100 p-6 rounded-lg shadow-md my-12">
+  <div class="flex flex-col md:flex-row items-start gap-6">
+    <img src="Main game.png" alt="Ilustrasi Main Game" class="w-56 mx-auto md:mx-0" />
+
+    <div class="flex-1">
+      <h2 class="text-2xl font-bold text-pink-700 mb-4">Game Technology</h2>
+
+      <p><strong>Game Technology</strong> adalah bidang interdisipliner yang mencakup semua aspek teknologi yang digunakan dalam pengembangan, produksi, dan pengoperasian video game. Ini bukan hanya tentang membuat karakter bergerak di layar, tetapi juga tentang bagaimana seluruh dunia virtual diciptakan, dihidupkan, dan berinteraksi dengan pemain.</p>
+
+      <p class="mt-4">Bayangkan kamu sedang membangun sebuah taman hiburan raksasa. Game technology adalah semua ilmu pengetahuan dan alat yang kamu butuhkan untuk membangun wahana, membuat pemandangannya, memastikan listriknya berfungsi, dan mengelola semua orang yang datang. Ini adalah fondasi teknis di balik pengalaman bermain game yang imersif dan menarik.</p>
+
+      <h3 class="mt-6 text-pink-600 font-semibold">Komponen Utama dalam Game Technology</h3>
+      <ol class="list-decimal list-inside space-y-2 mt-2">
+        <li>
+          <strong>Game Engine:</strong> Framework inti untuk membangun game (contoh: Unity, Unreal Engine, Godot). Mencakup rendering, fisika, audio, scripting, animasi, dan lainnya.
+        </li>
+        <li>
+          <strong>Grafis dan Rendering:</strong> Meliputi model 3D, tekstur, shader, partikel, dan teknik menampilkan visual di layar.
+        </li>
+        <li>
+          <strong>Fisika dan Simulasi:</strong> Untuk menghadirkan gerakan, ledakan, gravitasi, dan realisme objek di game.
+        </li>
+        <li>
+          <strong>Kecerdasan Buatan (AI):</strong> Otak dari NPC dalam game—bagaimana mereka berjalan, menyerang, merespons, dan mengambil keputusan.
+        </li>
+        <li>
+          <strong>Audio:</strong> Efek suara, musik, dan audio spasial untuk menciptakan imersi.
+        </li>
+        <li>
+          <strong>Jaringan (Networking):</strong> Teknologi multiplayer, sinkronisasi data, server management, dan latency reduction.
+        </li>
+        <li>
+          <strong>UI/UX:</strong> Menu, HUD, dan kontrol game yang user-friendly.
+        </li>
+        <li>
+          <strong>Alat Pengembangan:</strong> Seperti Blender, Photoshop, Git, Visual Studio, dan lain-lain.
+        </li>
+      </ol>
+
+      <div class="mt-6 bg-white border-l-4 border-pink-300 p-4 shadow rounded">
+        <h4 class="text-pink-600 font-semibold mb-2">Peran Teknologi Game di Industri</h4>
+        <ul class="list-disc list-inside">
+          <li><strong>VR & AR:</strong> Untuk hiburan, pelatihan, dan simulasi.</li>
+          <li><strong>Simulasi:</strong> Digunakan di sektor medis, militer, dan teknik.</li>
+          <li><strong>Visualisasi Desain:</strong> Dalam arsitektur dan konstruksi.</li>
+          <li><strong>Film dan Animasi:</strong> Tools game juga digunakan dalam produksi film.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mt-6">
+    <img src="Controller.png" alt="Ilustrasi Game Controller" class="w-40 mx-auto">
+  </div>
+</section>
+
+
+<section class="bg-yellow-50 p-6 rounded-lg shadow-md my-12">
+  <!-- Ilustrasi Gambar di Atas (sampingan) -->
+  <div class="flex flex-row justify-center items-center gap-4 mb-6">
+    <img src="GIS.png" alt="Ilustrasi GIS" class="w-28 sm:w-32 h-auto object-contain" />
+    <img src="teknologi gis.png" alt="Ilustrasi Lokasi HP" class="w-28 sm:w-32 h-auto object-contain" />
+  </div>
+
+  <!-- Konten Utama -->
+  <div class="text-center text-gray-800 leading-relaxed space-y-4">
+    <h2 class="text-2xl font-bold text-yellow-600 mb-4">Apa Itu Geographic Information Systems (GIS)?</h2>
+    <p><strong>Geographic Information Systems (GIS)</strong> adalah sistem yang dirancang untuk menangkap, menyimpan, mengelola, menganalisis, dan menyajikan semua jenis data geografis atau spasial. Sederhananya, GIS adalah cara untuk memahami dunia dengan melihat data di peta.</p>
+    <p>Bayangkan kamu memiliki tumpukan data yang sangat banyak tentang sebuah kota: di mana rumah sakit berada, lokasi jalan, populasi penduduk di setiap area, di mana ada taman, dan data cuaca. Kalau data ini hanya berupa tabel atau angka, sulit sekali untuk melihat hubungan antar data. Nah, GIS itu seperti "otak" yang bisa mengambil semua data itu, menaruhnya di atas peta digital, lalu menganalisisnya untuk menemukan pola, hubungan, atau tren yang tidak terlihat jika hanya melihat data mentah.</p>
+
+    <h3 class="text-yellow-600 font-semibold text-lg mt-6">Bagaimana GIS Bekerja?</h3>
+    <p>GIS bekerja dengan mengintegrasikan data geografis (berbasis lokasi) dengan informasi deskriptif. Ada dua jenis utama data yang digunakan dalam GIS:</p>
+
+    <ul class="list-disc list-inside text-left max-w-xl mx-auto">
+      <li><strong>Data Spasial:</strong> Vektor (titik, garis, poligon) & Raster (grid piksel)</li>
+      <li><strong>Data Atribut:</strong> Deskripsi non-spasial seperti nama, kapasitas, populasi</li>
+    </ul>
+
+    <p>GIS menggabungkan kedua jenis data ini. Misalnya, kamu bisa mengklik sebuah titik (lokasi rumah sakit) di peta, dan GIS akan menampilkan semua informasi atribut tentang rumah sakit itu (nama, alamat, jumlah dokter, dll.).</p>
+
+    <h3 class="text-yellow-600 font-semibold text-lg mt-6">Fungsi Utama GIS</h3>
+    <ul class="list-disc list-inside text-left max-w-xl mx-auto">
+      <li><strong>Data Capture:</strong> GPS, drone, citra satelit, digitalisasi</li>
+      <li><strong>Data Storage & Management:</strong> Database spasial</li>
+      <li><strong>Data Analysis:</strong>
+        <ul class="list-disc list-inside ml-6">
+          <li>Buffer, Overlay, Network, Interpolation, Visibility</li>
+        </ul>
+      </li>
+      <li><strong>Data Visualization:</strong> Peta, grafik, dashboard</li>
+    </ul>
+
+    <h3 class="text-yellow-600 font-semibold text-lg mt-6">Aplikasi GIS</h3>
+    <ul class="list-disc list-inside text-left max-w-xl mx-auto">
+      <li>Perencanaan kota & wilayah</li>
+      <li>Manajemen sumber daya alam</li>
+      <li>Tanggap bencana</li>
+      <li>Bisnis & pemasaran</li>
+      <li>Kesehatan masyarakat</li>
+      <li>Transportasi & logistik</li>
+      <li>Pemerintahan & pertahanan</li>
+    </ul>
+  </div>
+</section>
+
+    </div>
+  </main>
+
+  <div class="text-center mb-6">
+        <h2 class="text-center text-3xl font-bold text-gray-800 mb-8">Informasi Selanjutnya</h2>
+        <p class="italic text-blue-700">"We're More Than a Laboratory; We're Partners in Your Growth"</p>
+      </div>
+
+  <!-- Instagram Video Embed -->
+<div class="mt-10 overflow-x-auto">
+  <div class="flex gap-10 w-max">
+    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DLUaDgjJyDU/?img_index=1" data-instgrm-version="14" style="min-width: 300px;"></blockquote>
+    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DLUOBt-JJmC/?img_index=1" data-instgrm-version="14" style="min-width: 300px;"></blockquote>
+    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DLT5kzlpMkn/" data-instgrm-version="14" style="min-width: 300px;"></blockquote>
+    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DLUEVhXp4VX/" data-instgrm-version="14" style="min-width: 300px;"></blockquote>
+  </div>
+</div>
+</div>
+
+<script async src="//www.instagram.com/embed.js"></script>
+  <footer class="bg-gray-200 text-center p-4 mt-10">
+    &copy; 2025 MBC Laboratory
+  </footer>
+</body>
+</html>
