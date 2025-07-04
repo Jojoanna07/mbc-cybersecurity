@@ -1,0 +1,4 @@
+[2025-07-04 15:41:04] ALERT: Suspicious SQL injection attempt detected from IP 192.168.0.10. Rule: sql-injection-pattern-01
+[2025-07-04 15:41:04] ALERT: Cross-site scripting (XSS) attack attempt from IP 172.16.5.4. Rule: xss-attempt-detected
+[2025-07-04 15:41:04] INFO: Traffic analysis log initialized. Monitoring port 80 and 443.
+[2025-07-04 15:41:04] WARNING: Brute force login attempt detected from IP 203.0.113.17. Rule: login-attempt-threshold
